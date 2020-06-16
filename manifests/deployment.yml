@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: imagename 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: imagename 
+    spec:
+      containers:
+        - name: imagename 
+          image: akstestacrqwerty.azurecr.io/imagename
+          ports:
+          - containerPort: 8090
